@@ -7,7 +7,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn start
 ```
 
 ### Compiles and minifies for production
@@ -15,5 +15,17 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Todo
+- [x] Player animation on collision 
+- [x] Restart
+- [x] Move on keydown
+- [x] Scaling
+- [x] Sounds
+- [x] Stop on checkpoints
+- [x] Achievement modal
+- [x] Stampede
+- [x] Bonuses
+- [x] Checkpoints
+- [x] Player skins
+- [ ] Water reflection (displacement filter)
+- [ ] Bloom and perfomance checking

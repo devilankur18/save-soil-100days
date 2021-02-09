@@ -1,0 +1,39 @@
+{"frames": {
+
+"bike1-1.png":
+{
+	"frame": {"x":1,"y":1,"w":141,"h":94},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":7,"w":141,"h":94},
+	"sourceSize": {"w":141,"h":101}
+},
+"bike1-2.png":
+{
+	"frame": {"x":144,"y":1,"w":141,"h":94},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":7,"w":141,"h":94},
+	"sourceSize": {"w":141,"h":101}
+},
+"bike1-3.png":
+{
+	"frame": {"x":287,"y":1,"w":141,"h":94},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":7,"w":141,"h":94},
+	"sourceSize": {"w":141,"h":101}
+}},
+"animations": {
+	"bike1": ["bike1-1.png","bike1-2.png","bike1-3.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bike1.png",
+	"format": "RGBA8888",
+	"size": {"w":429,"h":96},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:dbadd5e231fc7a4139eae885705a6a64:0dd9866654b23c554a9cc6f12d9397ca:ac8115d5ef984fb3eb54432475d8d3e1$"
+}
+}
