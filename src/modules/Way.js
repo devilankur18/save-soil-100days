@@ -84,10 +84,10 @@ export default class Way {
 
 		this.items = []
 
-		this.typeChances = ['obstacle', 'bonus']
+		this.typeChances = ['obstacle', 'obstacle', 'bonus', 'obstacle']
 
 		this.itemChances = {
-			bonus: [ 'card' ],
+			bonus: [ 'gas' ],
 			obstacle: ['acid', 'pit', 'barrier'],
 		}
 
@@ -185,26 +185,6 @@ export default class Way {
 			store.commit('setGlobalSpeed', 1)
 		}
 
-		let route
-		if (type === 'bonus') { // card appeared
-			this.itemChances.bonus = store.state.hud
-				? [ 'gas' ]
-				: [ 'gas', 'card', 'gas', 'gas' ]
-
-			this.typeChances = ['obstacle', 'obstacle', 'bonus', 'obstacle']
-
-			if (name === 'card') route = 1
-
-			cross = function(callback) {
-				store.commit('showHud')
-				store.commit('setScore', 500)
-
-				this.container.alpha = 0
-
-				if (callback) callback()
-			}
-		}
-
 		if (name === 'gas') {
 			this.typeChances = [ 'obstacle' ]
 
@@ -227,7 +207,7 @@ export default class Way {
 			safeArea: 	this.safeArea[ (options.name || name) ],
 		})
 		// item.route = options.route || 0
-		item.route = route || random.from([0, 1, 2])
+		item.route = random.from([0, 1, 2])
 
 		item.container.position.x = WIDTH + random.range(0, WIDTH / 8)
 		item.container.position.y = -(0.235 * this.container.height + 52 * item.route)

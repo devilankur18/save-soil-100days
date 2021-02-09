@@ -15,7 +15,7 @@
 
 	<intro :class="{ visible: step === 0 }"/>
 
-	<hud :class="{ visible: ui && hud }"/>
+	<hud :class="{ visible: ui && !phrase }"/>
 
 	<gameover :class="{ visible: step === 2 }"/>
 
@@ -108,7 +108,6 @@ export default {
 		...mapState({
 			step: state => state.step,
 			phrase: state => state.phrase,
-			hud: state => state.hud,
 			gameover: state => state.gameover,
 			achievement: state => state.achievement,
 			score: state => pad(state.score, 6),
@@ -290,7 +289,7 @@ header {
 	}
 
 	opacity: 0;
-	transition: opacity .4s 1s;
+	transition: opacity .4s;
 
 	&.visible {
 		opacity: 1;

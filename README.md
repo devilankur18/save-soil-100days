@@ -1,19 +1,14 @@
-# bike-game
+# [bike-game](https://nextgtrgod.github.io/bike-game/)
 
-## Project setup
-```
-yarn install
-```
+Simple game for the Moscow company Rocketbank
 
-### Compiles and hot-reloads for development
-```
-yarn start
-```
+* [PixiJS](https://www.pixijs.com/)
+* [es6-tween](https://github.com/tweenjs/es6-tween)
+* [Vue.js](https://vuejs.org/)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+<a href="https://nextgtrgod.github.io/bike-game/" target="_blank">
+	<img src="/screenshot.jpg?raw=true">
+</a>
 
 ## Todo
 - [x] Player animation on collision 
