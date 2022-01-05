@@ -1,21 +1,20 @@
 {
 	"name": "bike-game",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "nextgtrgod",
 	"scripts": {
 		"start": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"deploy": "./deploy.sh"
+		"build": "vue-cli-service build"
 	},
 	"dependencies": {
 		"core-js": "^3.6.5",
 		"es6-tween": "^5.5.11",
-		"pixi-filters": "^3.2.2",
-		"pixi.js": "^5.3.7",
+		"pixi-filters": "^4.1.5",
+		"pixi.js": "^6.2.1",
 		"postcss-import": "^12.0.1",
 		"postcss-loader": "^5.0.0",
 		"postcss-preset-env": "^6.7.0",
-		"standardized-audio-context": "^25.1.9",
+		"standardized-audio-context": "^25.3.19",
 		"vue": "^2.6.11",
 		"vuex": "^3.4.0"
 	},

@@ -42,7 +42,7 @@ export default class Render {
 			width: WIDTH,
 			height: HEIGHT,
 			antialias: false,
-			transparent: false,
+			backgroundAlpha: 1,
 			autoResize: false,
 			backgroundColor: 0x140820,
 			powerPreference: 'high-performance',

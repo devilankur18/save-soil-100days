@@ -1,4 +1,4 @@
-import { AudioContext as sAudioContext } from 'standardized-audio-context'
+import { AudioContext as StandardizedAudioContext } from 'standardized-audio-context'
 
 import VCF from '@/modules/audio/VCF'
 import BufferLoader from '@/modules/audio/BufferLoader'
@@ -7,10 +7,9 @@ import { volume } from '@/config'
 
 class Synth {
 	constructor() {
-
 		try {
 			this.context = window.webkitAudioContext
-				? new sAudioContext()
+				? new StandardizedAudioContext()
 				: new AudioContext()
 
 			document.body.addEventListener('mousedown', () => this.resumeAudio())
@@ -27,8 +26,6 @@ class Synth {
 	}
 
 	async preload(url) {
-		this.loader = new BufferLoader(this.context)
-		
 		this.loaded = await this.loader.load(url)
 
 		return Object.keys(this.loaded).reduce((acc, key) => ({
