@@ -1,7 +1,7 @@
 <template>
 <section id="intro">
 	<img src="@/assets/images/intro.png">
-	<p>Для старта нажмите любую&nbsp;кнопку</p>
+	<p>Press any button to &nbsp;start</p>
 	<span>ROCKETGAMES PRODUCTION 2019</span>
 </section>
 </template>
