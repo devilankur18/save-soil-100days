@@ -4,7 +4,8 @@
 	"author": "nextgtrgod",
 	"scripts": {
 		"start": "vue-cli-service serve",
-		"build": "vue-cli-service build"
+		"build": "vue-cli-service build",
+		"deploy": "surge dist/ save-soil.surge.sh" 
 	},
 	"dependencies": {
 		"core-js": "^3.6.5",
