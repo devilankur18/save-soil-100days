@@ -1,11 +1,11 @@
 {
-	"name": "bike-game",
-	"version": "1.0.1",
+	"name": "save-soil-game",
+	"version": "1.0.2",
 	"author": "nextgtrgod",
 	"scripts": {
 		"start": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"deploy": "surge dist/ save-soil.surge.sh" 
+		"deploy": "surge dist/ save-soil.surge.sh"
 	},
 	"dependencies": {
 		"core-js": "^3.6.5",
