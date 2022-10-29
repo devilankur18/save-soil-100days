@@ -1,7 +1,7 @@
 <template>
 <div class="achievement" :class="{ visible }">
 	<img :src="imgPath">
-	<p>Нажмите любую кнопку, чтобы продолжить</p>
+	<p>Press any button to continue</p>
 </div>
 </template>
 
