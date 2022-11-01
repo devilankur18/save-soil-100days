@@ -1,8 +1,8 @@
 <template>
 <section id="intro">
 	<img src="@/assets/images/intro.png">
-	<p>Press any button to &nbsp;start</p>
-	<span>ROCKETGAMES PRODUCTION 2019</span>
+	<p style="color: black;">Press any button to &nbsp;start</p>
+	<span style="color: black;">100 day Motercyle Journey from UK to India, 30,000 KM </span>
 </section>
 </template>
 

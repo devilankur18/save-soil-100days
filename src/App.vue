@@ -78,7 +78,10 @@ export default {
 				this.$refs['scene'].start()
 			}
 
-			if (this.step === 3) return						// final
+			console.log("crashing!!!!")
+			if (this.step === 3)
+			return
+									// final
 
 			if (this.step === 0) {							// intro
 				this.$refs['scene'].run()
