@@ -39,7 +39,7 @@ export default new Vuex.Store({
 			// console.log(name, value, clamp(state[name].current + value, 0, 10))
 			state[name].current = clamp(state[name].current + value, 0, state[name].max)
 
-			if (!state[name].current && state.final) return state.step = 3
+			// 	if (!state[name].current && state.final) return state.step = 3
 			if (!state[name].current) state.gameover = true
 		},
 
