@@ -4,7 +4,7 @@
 	"author": "nextgtrgod",
 	"scripts": {
 		"start": "vue-cli-service serve",
-		"build": "vue-cli-service build",
+		"build": "vue-cli-service build ; ./optimize.sh ",
 		"deploy": "surge dist/ save-soil.surge.sh"
 	},
 	"dependencies": {
@@ -24,6 +24,7 @@
 		"@vue/cli-plugin-babel": "~4.5.0",
 		"@vue/cli-plugin-vuex": "~4.5.0",
 		"@vue/cli-service": "~4.5.0",
+		"imagemin-webpack-plugin": "^2.4.2",
 		"vue-template-compiler": "^2.6.11"
 	}
 }
