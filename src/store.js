@@ -32,6 +32,7 @@ export default new Vuex.Store({
 	},
 	mutations: {
 		setStep(state, value) {
+			// console.log(`changing step ${state.step} to ${value}`)
 			state.step = value
 		},
 
