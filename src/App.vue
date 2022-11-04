@@ -281,7 +281,7 @@ header {
 	bottom: 20px;
 	font-size: 1.75em;
 	line-height: 1;
-	text-shadow: 0 .1em 0 hsla(241, 86%, 40%, 0.596);
+	text-shadow: 0 .1em 0 #72b73b;
 	pointer-events: none;
 	z-index: 99;
 

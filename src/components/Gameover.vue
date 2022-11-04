@@ -29,7 +29,7 @@ export default {
 	align-items: center;
 	justify-content: center;
 
-	background-color: rgba(0, 0, 0, .8);
+	background-color: rgba(0, 0, 0, 0.8);
 
 	text-align: center;
 	font-size: 16px;
@@ -60,7 +60,7 @@ h1 {
 	margin-bottom: auto;
 	font-size: 3.45em;
 	line-height: 1;
-	text-shadow: 0 .1em 0 hsla(241, 86%, 40%, 0.596);
+	text-shadow: 0 .1em 0 #72b73b;
 
 	@media (min-width: 960px) {
 		font-size: 4.75em;
