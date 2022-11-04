@@ -19,6 +19,20 @@
 
 	<gameover :class="{ visible: step === 2 }"/>
 
+	<Snowf
+		:class="{ visible: step === 2 }"/>
+		:amount="{{Math.floor(score / 1000) * 50}}"
+		:size="5"
+		:speed={{Math.floor(score / 500) * 2}}"
+		:wind="{{step * -1}}"
+		:opacity="0.8"
+		:swing="2"
+		:image="null"
+		:zIndex="null"
+		:resize="true"
+		color="#fff"
+	/>
+
 	<achievement name="gas"/>
 	<achievement name="hp"/>
 
@@ -45,6 +59,10 @@ import audio from '@/modules/audio'
 
 import pad from '@/utils/pad'
 
+import Snowf from 'vue-snowf';
+// import snow from "snow"
+
+// snow.start()
 
 export default {
 	name: 'App',
@@ -54,6 +72,7 @@ export default {
 		Hud,
 		Gameover,
 		Achievement,
+		Snowf
 	},
 	data: () => ({
 		loaded: false,
@@ -78,7 +97,7 @@ export default {
 				this.$refs['scene'].start()
 			}
 
-			console.log("crashing!!!!")
+			// console.log("crashing!!!!")
 			if (this.step === 3)
 			return
 									// final
