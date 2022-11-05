@@ -11,5 +11,19 @@
 </head>
 <body style="background-color: #140820">
 	<div id="app"></div>
+
+	<% if (process.env.VUE_APP_GA_ID != '') {  %>
+	<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= process.env.VUE_APP_GA_ID %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // gtag('config', 'G-MY4NGFHYTH');
+	  gtag('config', '<%= process.env.VUE_APP_GA_ID %>');
+    </script>
+	<% } %>
 </body>
+
 </html>
