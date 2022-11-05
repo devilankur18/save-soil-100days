@@ -258,7 +258,7 @@ export default class Render {
 		this.resize()
 		this.start()
 
-		setTimeout(() => this.makeBoom(), 500)
+		setTimeout(() => this.makeBoom(), 1500)
 	}
 
 	update(delta) {

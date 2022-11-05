@@ -5,7 +5,7 @@
 	</div>
 
 	<header :class="{ visible: !ui }">
-		<a href="https://rocketbank.ru/" target="_blank">
+		<a href="https://consciousplanet.org/" target="_blank">
 			<img src="@/assets/images/logo.svg">
 		</a>
 		<img src="@/assets/images/games.png">
@@ -19,7 +19,8 @@
 
 	<gameover :class="{ visible: step === 2 }"/>
 
-	<Snowf
+	<Snow
+		v-if="!isMobile"
 		:class="{ visible: step === 2 }"/>
 		:amount="{{Math.floor(score / 1000) * 50}}"
 		:size="5"
@@ -28,7 +29,7 @@
 		:opacity="0.8"
 		:swing="2"
 		:image="null"
-		:zIndex="null"
+		:zIndex="0"
 		:resize="true"
 		color="#fff"
 	/>
@@ -58,25 +59,24 @@ import Achievement from '@/components/Achievement'
 import audio from '@/modules/audio'
 
 import pad from '@/utils/pad'
-
-import Snowf from 'vue-snowf';
-// import snow from "snow"
-
-// snow.start()
+import Snow from '@/components/Snow'
+import {isMobile} from '@/config'
+console.log(isMobile);
 
 export default {
 	name: 'App',
 	components: {
-		Intro,
-		Scene,
-		Hud,
-		Gameover,
-		Achievement,
-		Snowf
-	},
+    Intro,
+    Scene,
+    Hud,
+    Gameover,
+    Achievement,
+    Snow,
+},
 	data: () => ({
 		loaded: false,
 		audio: true,
+		isMobile: false
 	}),
 	created() {
 		localStorage.getItem('audio') !== null && (this.audio = +localStorage.getItem('audio'))
@@ -86,6 +86,7 @@ export default {
 		window.addEventListener('keypress', this.next)
 		document.body.addEventListener('click', this.next)
 		document.body.addEventListener('touchstart', this.next)
+		this.isMobile = isMobile
 	},
 	methods: {
 		next() {
