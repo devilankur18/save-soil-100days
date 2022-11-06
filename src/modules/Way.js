@@ -170,7 +170,7 @@ export default class Way {
 	createItem(options = {}) {
 
 		let type = random.from(this.typeChances)
-		let name = random.from(this.itemChances[type])
+		let name = random.from(this.itemChances[type])	
 
 		let cross = () => {
 			if (this.player.invincible) return
@@ -182,7 +182,11 @@ export default class Way {
 			if (store.state.hp.current) audio.start('hit')
 			else audio.start('gameover')
 
-			store.commit('setGlobalSpeed', 1)
+			console.log("HIT")
+			store.commit('incrementGlobalSpeed', -0.2)
+			// globalSpeed < 1
+			// 	? store.commit('setGlobalSpeed', parseFloat(process.env.VUE_APP_BASE_SPEED))
+			// 	: 
 		}
 
 		if (name === 'gas') {
@@ -353,7 +357,7 @@ export default class Way {
 
 		// speed up
 		globalSpeed < 1
-			? store.commit('setGlobalSpeed', clamp((globalSpeed + .01), 0, this.maxSpeed))
+			? store.commit('setGlobalSpeed', clamp((globalSpeed + .0005), 0, this.maxSpeed))
 			: store.commit('setGlobalSpeed', clamp((globalSpeed + .0001), 0, this.maxSpeed))
 
 

@@ -184,7 +184,7 @@ export default class Render {
 	makeBoom() {
 		this.layers['way'].start({
 			callback: () => {
-				store.commit('setGlobalSpeed', 1.5)
+				store.commit('setGlobalSpeed', parseFloat(process.env.VUE_APP_BASE_SPEED))
 				audio.start('background', true)
 			}
 		})

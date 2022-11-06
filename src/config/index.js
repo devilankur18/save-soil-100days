@@ -15,7 +15,7 @@ const time = {
 	score:		1000,
 }
 
-let maxSpeed = 1.2
+let maxSpeed = 1.5
 let portrait = false
 
 let check = () => {
