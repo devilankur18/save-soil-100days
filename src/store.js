@@ -61,7 +61,17 @@ export default new Vuex.Store({
 
 		setGlobalSpeed(state, value) { 
 			// state.globalSpeed = clamp(state.globalSpeed + value, 0, 100)
+			console.log(`speed ${state.globalSpeed} to ${value}` )
 			state.globalSpeed = value
+		},
+
+		incrementGlobalSpeed(state, value) { 
+			// state.globalSpeed = clamp(state.globalSpeed + value, 0, 100)
+			state.globalSpeed < 0.8
+				? state.globalSpeed = parseFloat(process.env.VUE_APP_BASE_SPEED)
+				: state.globalSpeed = state.globalSpeed + value
+				// ? setGlobalSpeed(state, parseFloat(process.env.VUE_APP_BASE_SPEED))
+				// : setGlobalSpeed(state, state.globalSpeed + value)
 		},
 
 		setScore(state, score) {
