@@ -1,5 +1,18 @@
 <template>
 <section id="gameover">
+	<div class="reason-container">
+		<div v-if="gameOverReason == 'hp'">
+			<img class="reason" src="@/assets/images/hp-4.png">
+			<h2  v-if="gameOverReason == 'hp'">Life Empty </h2>
+			<h3 >Avoid Crashing in to objects</h3>
+		</div>
+		<div v-if="gameOverReason == 'gas'">
+			<img class="reason" src="@/assets/images/gas-4.png">
+			<h2 v-if="gameOverReason == 'gas'" >Fuel Empty </h2>
+			<h3 >Keep collecting fuel</h3>
+		</div>
+	</div>
+
 	<h2>If you want success, the foremost thing is to ensure </br>that you are not obstacle to it. </br> - Sadhguru</h2>
 	<h1>Try Again</h1>
 	<p>Press any button to replay</p>
@@ -8,8 +21,14 @@
 
 
 <script>
+import { mapState } from 'vuex'	
 export default {
 	name: 'Gameover',
+	computed: {
+		...mapState({
+			gameOverReason: state => state.gameOverReason,
+		}),
+	},
 }
 </script>
 
@@ -49,6 +68,20 @@ export default {
 		font-size: 24px;
 	}
 }
+
+.reason-container {
+	margin-top: auto;
+}
+.reason {
+	
+	animation: blink .400s infinite linear alternate;
+	opacity: 0;
+}
+
+h3 {
+	font-size: 0.8em;
+}
+
 
 h2 {
 	margin-top: auto;

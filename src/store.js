@@ -26,6 +26,7 @@ export default new Vuex.Store({
 
 		globalSpeed: 0,
 		gameover: false,
+		gameOverReason: null,
 
 		score: 0,
 		final: false,
@@ -41,7 +42,10 @@ export default new Vuex.Store({
 			state[name].current = clamp(state[name].current + value, 0, state[name].max)
 
 			// 	if (!state[name].current && state.final) return state.step = 3
-			if (!state[name].current) state.gameover = true
+			if (!state[name].current) {
+				state.gameOverReason = name
+				state.gameover = true
+			}
 		},
 
 		maximize(state, { name, value = 10 }) {
