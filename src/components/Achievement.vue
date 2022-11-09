@@ -1,6 +1,6 @@
 <template>
 <div class="achievement" :class="{ visible }">
-	<h2>Upgrade !!</h2>
+	<h1>Upgrade !!</h1>
 	<img :src="imgPath">
 	<p>Press any button to continue</p>
 </div>

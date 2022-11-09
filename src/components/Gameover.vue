@@ -13,6 +13,12 @@
 		</div>
 	</div>
 
+	<h1 class="score-container">
+		Score {{score}}
+	</h1>
+
+	
+
 	<h2>If you want success, the foremost thing is to ensure </br>that you are not obstacle to it. </br> - Sadhguru</h2>
 	<h1>Try Again</h1>
 	<p>Press any button to replay</p>
@@ -27,6 +33,7 @@ export default {
 	computed: {
 		...mapState({
 			gameOverReason: state => state.gameOverReason,
+			score: state => state.score,
 		}),
 	},
 }
@@ -70,6 +77,9 @@ export default {
 }
 
 .reason-container {
+	margin-top: auto;
+}
+.score-container {
 	margin-top: auto;
 }
 .reason {

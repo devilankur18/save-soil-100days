@@ -358,7 +358,7 @@ export default class Way {
 		// speed up
 		globalSpeed < 1
 			? store.commit('setGlobalSpeed', clamp((globalSpeed + .0005), 0, this.maxSpeed))
-			: store.commit('setGlobalSpeed', clamp((globalSpeed + .0001), 0, this.maxSpeed))
+			: store.commit('setGlobalSpeed', clamp((globalSpeed + .0003), 0, this.maxSpeed))
 
 
 		this.now += delta * 1000 / 60
