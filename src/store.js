@@ -71,9 +71,19 @@ export default new Vuex.Store({
 
 		incrementGlobalSpeed(state, value) { 
 			// state.globalSpeed = clamp(state.globalSpeed + value, 0, 100)
-			state.globalSpeed < 0.8
-				? state.globalSpeed = parseFloat(process.env.VUE_APP_BASE_SPEED)
-				: state.globalSpeed = state.globalSpeed + value
+			// state.globalSpeed < 0.8
+			// 	? state.globalSpeed = parseFloat(process.env.VUE_APP_BASE_SPEED)
+			// 	: state.globalSpeed = state.globalSpeed + value
+			if (state.globalSpeed < 0.8) {
+				state.globalSpeed = parseFloat(process.env.VUE_APP_BASE_SPEED)
+			} else if (state.globalSpeed >= 0.8 && state.globalSpeed < 1) {
+				state.globalSpeed = 0.8
+			} else if (state.globalSpeed >= 1 && state.globalSpeed < 1.3) {
+				state.globalSpeed = 1
+			} else if (state.globalSpeed >= 1.3) {
+				state.globalSpeed = state.globalSpeed - 0.1
+			}
+
 				// ? setGlobalSpeed(state, parseFloat(process.env.VUE_APP_BASE_SPEED))
 				// : setGlobalSpeed(state, state.globalSpeed + value)
 		},

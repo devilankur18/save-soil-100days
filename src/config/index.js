@@ -20,12 +20,12 @@ let portrait = false
 
 let check = () => {
 	if (window.innerWidth <= window.innerHeight) {
-		maxSpeed = 0.8
+		maxSpeed = 1
 		time.items = 1200
 
 		portrait = true
 	} else {
-		maxSpeed = 1.2
+		maxSpeed = 2.0
 		time.items = 500
 
 		portrait = false
